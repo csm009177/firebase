@@ -115,13 +115,13 @@
     ];
 
     // 결과를 화면에 표시
+    resultT.innerHTML = '';
     fakeSearchResults.forEach(result => {
       const resultItem = document.createElement('p');
       resultItem.textContent = result;
       result.appendChild(resultItem);
     });
   });
-  resultT.innerHTML = '';
   
 
 
