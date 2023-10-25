@@ -3,9 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>main</title>
+  <style>*{margin:0; padding:0; box-sizing: border-box; flex-wrap: wrap; align-content: center; justify-content: center; background-color:black}
+    #root {
+      display: flex; 
+      flex-wrap: wrap; 
+      align-content: center; 
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      color: gray;
+    }
+    #root > div{       
+      display: flex; 
+      flex-wrap: wrap; 
+      align-content: center; 
+      justify-content: center;
+      height: 10vh;
+      width: 80vw;
+      color: gray;
+      background-color: white;
+    }
+    #root > div > button:nth-child(1){       
+      display: flex; 
+      flex-wrap: wrap; 
+      align-content: center; 
+      justify-content: center;
+      height: 10vh;
+      width: 15vw;
+      color: gray;
+      background-color: gray;
+    }
+    #root > div > input {       
+      display: flex; 
+      flex-wrap: wrap; 
+      align-content: center; 
+      justify-content: center;
+      height: 10vh;
+      width: 50vw;
+      color: gray;
+      background-color: white;
+    }
+    #root > div > button:nth-child(3){       
+      display: flex; 
+      flex-wrap: wrap; 
+      align-content: center; 
+      justify-content: center;
+      height: 10vh;
+      width: 15vw;
+      color: darkgreen;
+      background-color: gray;
+    }
+    
+    </style>
 </head>
 <body>
-  
+  <div id="root">
+    <div>
+      <button id="toggle"></button>  
+      <input type="text" placeholder="type here">
+      <button>Go</button>
+    </div>
+  </div>
+  <script>
+    function toggle(){
+      let toggle = document.addEventListener('click', ()=>{
+        
+      })
+    }
+    
+  </script>
 </body>
 </html>
