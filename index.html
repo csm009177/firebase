@@ -75,13 +75,18 @@
   <div id="root">
     <div>
       <button id="toggle"></button>  
-      <input type="text" placeholder="type here">
-      <button>Go</button>
+      <input  id="input" type="text" placeholder="type here">
+      <button id="GoBnt" >Go</button>
       <button id="speechButton">G</button>
     </div>
   </div>
   <script>
     let toggle = document.getElementById('toggle');
+    let input = document.getElementById('input');
+    let GoBnt = document.getElementById('GoBnt');
+    let resultT = document.getElementById('resultT');
+    
+    // toggle
       toggle.innerHTML = 'User';
       toggle.style.color = 'green';
       let togHandle = true;
@@ -97,16 +102,38 @@
           console.log(togHandle);
         }
       })
-      // 음성 인식 버튼을 클릭할 때 실행되는 함수
-    let speechButton = document.getElementById('speechButton')
+
+
+  GoBnt.addEventListener('click', function() {
+  let query = input.value;
+
+    // 검색 결과를 시뮬레이션하는 코드 (실제로는 API를 사용해야 함)
+  let fakeSearchResults = [
+      '검색 결과 1',
+      '검색 결과 2',
+      '검색 결과 3',
+    ];
+
+    // 결과를 화면에 표시
+    resultT.innerHTML = '';
+    fakeSearchResults.forEach(result => {
+      let resultItem = document.createElement('p');
+      resultItem.textContent = result;
+      result.appendChild(resultItem);
+    });
+  });
+
+
+
+    // speech API
     speechButton.addEventListener('click', function() {
     // 음성 인식 API를 지원하는지 확인
     if ('webkitSpeechRecognition' in window) {
-      const recognition = new webkitSpeechRecognition();
+      let recognition = new webkitSpeechRecognition();
       
       // 음성 입력이 중지될 때 실행
       recognition.onresult = function(event) {
-        const result = event.results[0][0].transcript;
+        let result = event.results[0][0].transcript;
         document.querySelector('input').value = result;
       };
 
