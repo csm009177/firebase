@@ -105,24 +105,24 @@
 
 
   GoBnt.addEventListener('click', function() {
-  let query = input.value;
+  const query = input.value;
 
     // 검색 결과를 시뮬레이션하는 코드 (실제로는 API를 사용해야 함)
-  let fakeSearchResults = [
+    const fakeSearchResults = [
       '검색 결과 1',
       '검색 결과 2',
       '검색 결과 3',
     ];
 
     // 결과를 화면에 표시
-    resultT.innerHTML = '';
     fakeSearchResults.forEach(result => {
-      let resultItem = document.createElement('p');
+      const resultItem = document.createElement('p');
       resultItem.textContent = result;
       result.appendChild(resultItem);
     });
   });
-
+  resultT.innerHTML = '';
+  
 
 
     // speech API
