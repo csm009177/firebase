@@ -33,8 +33,9 @@
       width: 15vw;
       color: gray;
       background-color: gray;
+      font-size: 5vh;
     }
-    #root > div > input {       
+    #root > div > input:nth-child(2) {       
       display: flex; 
       flex-wrap: wrap; 
       align-content: center; 
@@ -43,6 +44,7 @@
       width: 50vw;
       color: gray;
       background-color: white;
+      font-size: 5vh;
     }
     #root > div > button:nth-child(3){       
       display: flex; 
@@ -53,6 +55,7 @@
       width: 15vw;
       color: darkgreen;
       background-color: gray;
+      font-size: 5vh;
     }
     
     </style>
@@ -66,11 +69,23 @@
     </div>
   </div>
   <script>
-    function toggle(){
-      let toggle = document.addEventListener('click', ()=>{
-        
+    
+    let toggle = document.getElementById('toggle');
+      toggle.innerHTML = 'User';
+      toggle.style.color = 'green';
+      let togHandle = true;
+      toggle.addEventListener('click', (eventTarget) => {
+        if (toggle.innerHTML === 'User') {
+          toggle.innerHTML = 'Expert';
+          toggle.style.color = 'red';
+          console.log(togHandle);
+        } else {
+          togHandle = true;
+          toggle.innerHTML = 'User';
+          toggle.style.color = 'green';
+          console.log(togHandle);
+        }
       })
-    }
     
   </script>
 </body>
