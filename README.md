@@ -62,7 +62,7 @@
  ( ) Storage: Configure a security rules file for Cloud Storage
  ( ) Emulators: Set up local emulators for Firebase products
 
- 위와 같은 다양한 옵션 선택지를 보내주는데 여기에서 Hosting 부분중 첫번째를 선택한다.
+ 위와 같은 다양한 옵션 선택지를 보내주는데 여기에서 스페이스바를 이용하여 Hosting 부분중 첫번째를 선택한다.
  ( ) Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
  - 스페이스바를 눌러 선택하고 엔터를 눌러 진행한다.
  - github를 통해 진행할 것인지를 물어보는 것으로 "Action" 이라는 github 배포서비스를 말하며 보통의 경우 github의 저장소를 firebase를 통해 서비스하고자 할때 사용하는 것으로 *optionally* 직접 처리하기 위해 깃허브 액션 기능을 사용하지 않아도 되는 항목을 선택한다.(추후에는 필요한 만큼 선택)
